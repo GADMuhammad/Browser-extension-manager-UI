@@ -1,37 +1,7 @@
 @import "tailwindcss";
 
-/* @theme {
-  font-family: {
-    sans: [ "Noto Sans", sans-serif];
-  }
-
-  screens: {
-    mobile: 375px;
-    desktop: 1440px;
-  }
-
-  colors: {
-    neutral: {
-      0: "#f9fcfd";
-      100: "#ededed";
-      200: "#d6e3f7";
-      300: "#c7c7c7";
-      600: "#555a69";
-      700: "#2e3240";
-      800: "#1f2230";
-      900: "#111836";
-    }
-    ,
-  red: {
-      400: "#f26b61";
-      500: "#d75a51";
-      700: "#ac3f38";
-    }
-  }
-} */
-
 :root {
-  --color-neutral-0: #f9fcfd;
+  /* --color-neutral-0: #f9fcfd; */
   --color-neutral-100: #ededed;
   --color-neutral-200: #d6e3f7;
   --color-neutral-300: #c7c7c7;
@@ -42,4 +12,13 @@
   --color-red-400: #f26b61;
   --color-red-500: #d75a51;
   --color-red-700: #ac3f38;
+}
+
+body {
+  background-color: #d6e3f7;
+  font-family: "Noto Sans";
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }

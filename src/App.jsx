@@ -1,2 +1,12 @@
-const App = () => <p className="text-9xl text-[#ac3f38]">GO NOW</p>;
-export default App
+import Buttons from "./buttons";
+import Header from "./Header";
+
+const App = () => {
+  return (
+    <>
+      <Header /> <Buttons />
+    </>
+  );
+};
+
+export default App;
