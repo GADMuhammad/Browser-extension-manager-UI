@@ -21,4 +21,5 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin: auto 8.2rem;
 }
