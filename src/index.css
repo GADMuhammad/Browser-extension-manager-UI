@@ -23,3 +23,13 @@ body {
   user-select: none;
   margin: auto 8.2rem;
 }
+
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-neutral-200);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-neutral-200);
+}
