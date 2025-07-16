@@ -16,7 +16,7 @@ const Extension = ({ title, icon, isChecked, description, dispatch }) => {
         dispatch({ type: "Remove", load: title });
         Swal.fire({
           title: "Deleted!",
-          text: "Your file has been deleted.",
+          text: "Your extension has been deleted.",
           icon: "success",
         });
       }
