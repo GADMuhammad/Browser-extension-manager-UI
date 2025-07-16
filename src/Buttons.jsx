@@ -1,11 +1,7 @@
-import { useState } from "react";
-
-const Buttons = () => {
-  const [display, setDisplay] = useState("All");
-
+const Buttons = ({ state, dispatch }) => {
   const buttonsStyle = (label) =>
     `${
-      label === display
+      label === state.status
         ? "bg-red-500 text-white border-transparent"
         : "bg-white border-neutral-300"
     } border-1 cursor-pointer hover:bg-red-500 hover:text-white hover:border-transparent transition-colors duration-300 border-solid rounded-4xl px-4 py-1.5`;
@@ -17,7 +13,8 @@ const Buttons = () => {
         {["All", "Active", "Inactive"].map((label) => (
           <button
             key={label}
-            onClick={() => setDisplay(label)}
+            // onClick={() => setDisplay(label)}
+            onClick={() => dispatch({ type: label })}
             className={buttonsStyle(label)}
           >
             {label}

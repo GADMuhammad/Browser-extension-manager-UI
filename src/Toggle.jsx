@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Toggle = ({ title, isChecked }) => {
+const Toggle = ({ title, isChecked, dispatch }) => {
   const [checked, setChecked] = useState(isChecked);
 
   const handleOnAndOff = (newValue) => {
@@ -14,6 +14,7 @@ const Toggle = ({ title, isChecked }) => {
     );
 
     localStorage.setItem("extensions", JSON.stringify(updated));
+    dispatch({ type: "refresh", load: updated });
   };
 
   return (
