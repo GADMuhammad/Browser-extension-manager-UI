@@ -1,47 +1,42 @@
 @import "tailwindcss";
 
-:root {
-  /* --color-neutral-0: #f9fcfd; */
-  --color-neutral-100: #ededed;
-  --color-neutral-200: #d6e3f7;
-  --color-neutral-300: #c7c7c7;
-  --color-neutral-600: #555a69;
-  --color-neutral-700: #2e3240;
-  --color-neutral-800: #1f2230;
-  --color-neutral-900: #111836;
-  --color-red-400: #f26b61;
-  --color-red-500: #d75a51;
-  --color-red-700: #ac3f38;
+@theme {
+  --color-header: #fcfdff;
+  --color-text: #000;
+  --color-border: #ecf5fc;
+  --color-btn-bg: #d1d5dc;
+  --color-main-red: #c5271b;
+}
+
+.dark {
+  --color-header: #1f2535;
+  --color-border: #070e2a;
+  --color-text: #fcfdff;
+  --color-btn-bg: #525866;
+  --color-main-red: #fb5e55;
 }
 
 body {
-  background-color: #d6e3f7;
+  background-color: var(--color-border);
   font-family: "Noto Sans";
+  color: var(--color-text);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin: auto 8.2rem;
+  margin: auto 9.2rem;
 }
 
 ::-webkit-scrollbar {
-  width: 7.5px;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--color-neutral-200);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-neutral-200);
+  display: none;
 }
 
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 

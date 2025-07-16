@@ -2,9 +2,9 @@ const Buttons = ({ state, dispatch }) => {
   const buttonsStyle = (label) =>
     `${
       label === state.status
-        ? "bg-red-500 text-white border-transparent"
-        : "bg-white border-neutral-300"
-    } border-1 cursor-pointer hover:bg-red-500 hover:text-white hover:border-transparent transition-colors duration-300 border-solid rounded-4xl px-4 py-1.5`;
+        ? "bg-main-red text-header border-transparent"
+        : "bg-header border-btn-bg"
+    } border-1 cursor-pointer hover:bg-main-red hover:text-header hover:border-transparent transition-colors duration-300 border-solid rounded-4xl px-4 py-1.5`;
 
   return (
     <main className="mb-6 flex flex-wrap gap-10 justify-between items-center">
