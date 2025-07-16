@@ -54,7 +54,7 @@ const App = () => {
           <Extension key={extension.title} {...extension} dispatch={dispatch} />
         ))}
         {!state.displayedExtensions.length && (
-          <p className="mx-auto text-2xl tracking-wide">
+          <p className="mx-auto text-xl tracking-wide">
             No {state.status.toLowerCase()} extensions to display.
           </p>
         )}
