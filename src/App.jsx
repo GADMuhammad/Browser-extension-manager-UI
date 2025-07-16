@@ -30,18 +30,19 @@ const App = () => {
         };
 
       case "Remove":
-        const extensionsAfterRemove = state.displayedExtensions.filter(
-          (extensions) => extensions.title !== action.load
-        );
+        const extensionsAfterRemove = (displayedExtensions) =>
+          displayedExtensions.filter(
+            (extensions) => extensions.title !== action.load
+          );
 
         localStorage.setItem(
           "extensions",
-          JSON.stringify(extensionsAfterRemove)
+          JSON.stringify(extensionsAfterRemove(extensionsInfo))
         );
 
         return {
           ...state,
-          displayedExtensions: extensionsAfterRemove,
+          displayedExtensions: extensionsAfterRemove(state.displayedExtensions),
         };
 
       case "Reset":
