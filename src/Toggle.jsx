@@ -14,7 +14,7 @@ const Toggle = ({ title, isChecked, dispatch }) => {
     );
 
     localStorage.setItem("extensions", JSON.stringify(updated));
-    dispatch({ type: "refresh", load: updated });
+    dispatch({ type: "Refresh", load: updated });
   };
 
   return (

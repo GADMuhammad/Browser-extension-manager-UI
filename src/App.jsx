@@ -29,7 +29,26 @@ const App = () => {
           ),
         };
 
-      default:
+      case "Remove":
+        const extensionsAfterRemove = state.displayedExtensions.filter(
+          (extensions) => extensions.title !== action.load
+        );
+
+        localStorage.setItem(
+          "extensions",
+          JSON.stringify(extensionsAfterRemove)
+        );
+
+        return {
+          ...state,
+          displayedExtensions: extensionsAfterRemove,
+        };
+
+      case "Reset":
+        localStorage.setItem("extensions", JSON.stringify(extensions));
+        return { status: "All", displayedExtensions: extensions };
+
+      case "Refresh":
         if (state.status === "All") return state;
         const stateStatus = state.status === "Active";
         return {
@@ -38,6 +57,9 @@ const App = () => {
             (ex) => ex.isChecked === stateStatus
           ),
         };
+
+      default:
+        return state;
     }
   };
 
@@ -45,17 +67,27 @@ const App = () => {
     status: "All",
     displayedExtensions: extensionsInfo,
   });
+
   return (
     <>
-      <Header />
+      <Header state={state} dispatch={dispatch} />
       <Buttons state={state} dispatch={dispatch} />
       <div className="flex flex-wrap justify-center gap-3 mb-6">
-        {state.displayedExtensions.map((extension) => (
-          <Extension key={extension.title} {...extension} dispatch={dispatch} />
-        ))}
-        {!state.displayedExtensions.length && (
+        {state.displayedExtensions.length ? (
+          state.displayedExtensions.map((extension) => (
+            <Extension
+              key={extension.title}
+              {...extension}
+              dispatch={dispatch}
+            />
+          ))
+        ) : (
           <p className="mx-auto text-xl tracking-wide">
-            No {state.status.toLowerCase()} extensions to display.
+            No{" "}
+            {state.status.toLowerCase() !== "all"
+              ? state.status.toLowerCase()
+              : ""}{" "}
+            extensions to display.
           </p>
         )}
       </div>
