@@ -44,7 +44,6 @@ const extensions = [
 ];
 
 const App = () => {
-  //
   useEffect(() => {
     !localStorage.getItem("extensions") &&
       localStorage.setItem("extensions", JSON.stringify(extensions));
@@ -57,7 +56,7 @@ const App = () => {
     <>
       <Header />
       <Buttons />
-      <div className="grid grid-cols-3 gap-y-3">
+      <div className="flex flex-wrap justify-between gap-4">
         {extensionsInfo.map((extension) => (
           <Extension key={extension.title} {...extension} />
         ))}

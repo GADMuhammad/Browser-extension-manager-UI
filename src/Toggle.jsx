@@ -3,14 +3,6 @@ import { useState } from "react";
 const Toggle = ({ title, isChecked }) => {
   const [checked, setChecked] = useState(isChecked);
 
-  // const handleOnAndOff = (prev) => {
-  //   setChecked(!prev);
-  //   const newCase = extensions.map((extension) =>
-  //     extension.title === title ? { ...extension, isChecked: !prev } : extension
-  //   );
-  //   localStorage.setItem("extensions", JSON.stringify(newCase));
-  // };
-
   const handleOnAndOff = (newValue) => {
     setChecked(newValue);
 
