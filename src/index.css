@@ -25,6 +25,7 @@ body {
   -ms-user-select: none;
   user-select: none;
   margin: auto 11rem;
+  transition: background-color 0.3s ease-in-out;
 }
 
 ::-webkit-scrollbar {
