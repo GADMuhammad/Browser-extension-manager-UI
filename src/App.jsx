@@ -83,7 +83,7 @@ const App = () => {
             />
           ))
         ) : (
-          <p className="mx-auto text-xl tracking-wide">
+          <p className="mx-auto text-xl tracking-wide max-lg:text-base">
             No{" "}
             {state.status.toLowerCase() !== "all"
               ? state.status.toLowerCase()
