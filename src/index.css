@@ -24,7 +24,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin: auto 9.2rem;
+  margin: auto 11rem;
 }
 
 ::-webkit-scrollbar {
