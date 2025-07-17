@@ -16,24 +16,24 @@ const Header = ({ state, dispatch }) => {
   };
 
   return (
-    <header className="bg-header shadow-md mx-36 rounded-2xl border-border border-2 border-solid flex gap-6 justify-between my-12 px-4 py-3">
+    <header className="bg-header shadow-md mx-30 flex-wrap rounded-2xl border-border border-2 border-solid flex gap-6 justify-between my-12 px-4 py-3">
       <img src="/images/logo.svg" alt="LOGO" className="mr-auto" />
       <button
-        className={`bg-header py-2 px-4 text-text rounded-4xl cursor-pointer fade-in-up ${
-          state.displayedExtensions.length ? "hidden" : "block"
-        }`}
-        onClick={() => dispatch({ type: "Reset" })}
-      >
-        Reset all extensions
-      </button>
-      <button
         onClick={() => toggleTheme()}
-        className="bg-btn-bg rounded-xl p-2 cursor-pointer"
+        className="bg-btn-bg rounded-xl p-2 cursor-pointer w-fit"
       >
         <img
           src={`/images/icon-${darkModeCase ? "sun" : "moon"}.svg`}
           alt="toggle dark mode"
         />
+      </button>
+      <button
+        className={`bg-btn-bg py-2 px-4 text-text rounded-4xl cursor-pointer w-fit fade-in-up ${
+          state.displayedExtensions.length ? "hidden" : "block"
+        }`}
+        onClick={() => dispatch({ type: "Reset" })}
+      >
+        Reset all extensions
       </button>
     </header>
   );
