@@ -31,9 +31,7 @@ const App = () => {
 
       case "Remove":
         const extensionsAfterRemove = (displayedExtensions) =>
-          displayedExtensions.filter(
-            (extensions) => extensions.title !== action.load
-          );
+          displayedExtensions.filter((ex) => ex.title !== action.load);
 
         localStorage.setItem(
           "extensions",
