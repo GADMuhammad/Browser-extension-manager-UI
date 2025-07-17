@@ -24,7 +24,7 @@ const Extension = ({ title, icon, isChecked, description, dispatch }) => {
   };
 
   return (
-    <div className="w-96 h-44 p-4 grid grid-cols-[1fr_4fr] gap-x-0 items-start gap-3 justify-between transition-colors duration-300 rounded-2xl border-solid border-1 border-btn-bg bg-header fade-in-up">
+    <div className="w-96 h-44 p-4 grid grid-cols-[1fr_4fr] gap-x-0 gap-3 transition-colors duration-300 rounded-2xl border-solid border-1 border-btn-bg bg-header fade-in-up">
       <img src={icon} />
       <div className="justify-stretch">
         <h6 className="text-lg font-bold mb-0.5">{title}</h6>

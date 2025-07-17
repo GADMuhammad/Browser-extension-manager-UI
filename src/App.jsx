@@ -73,7 +73,7 @@ const App = () => {
     <>
       <Header state={state} dispatch={dispatch} />
       <Buttons state={state} dispatch={dispatch} />
-      <div className="flex flex-wrap justify-start gap-3 mb-6">
+      <div className="flex flex-wrap justify-center gap-3 mb-6 mx-9">
         {state.displayedExtensions.length ? (
           state.displayedExtensions.map((extension) => (
             <Extension

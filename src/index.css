@@ -6,6 +6,7 @@
   --color-border: #ecf5fc;
   --color-btn-bg: #d1d5dc;
   --color-main-red: #c5271b;
+  --margin-x: "9rem";
 }
 
 .dark {
@@ -24,7 +25,7 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  margin: auto 11rem;
+  /* margin: auto 0rem; */
   transition: background-color 0.3s ease-in-out;
 }
 
