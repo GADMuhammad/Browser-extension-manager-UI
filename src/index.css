@@ -25,7 +25,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* margin: auto 0rem; */
   transition: background-color 0.3s ease-in-out;
 }
 

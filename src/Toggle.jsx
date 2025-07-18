@@ -7,10 +7,8 @@ const Toggle = ({ title, isChecked, dispatch }) => {
     setChecked(newValue);
 
     const extensions = JSON.parse(localStorage.getItem("extensions")) || [];
-    const updated = extensions.map((extension) =>
-      extension.title === title
-        ? { ...extension, isChecked: newValue }
-        : extension
+    const updated = extensions?.map((ex) =>
+      ex.title === title ? { ...ex, isChecked: newValue } : ex
     );
 
     localStorage.setItem("extensions", JSON.stringify(updated));
