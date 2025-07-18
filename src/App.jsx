@@ -1,6 +1,6 @@
 import { useReducer } from "react";
 import { useEffect } from "react";
-import Buttons from "./buttons";
+import Buttons from "./Buttons";
 import Extension from "./Extension";
 import Header from "./Header";
 import extensions from "./extensions";
