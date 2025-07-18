@@ -25,7 +25,7 @@ const App = () => {
         return {
           status: action.type,
           displayedExtensions: extensionsInfo.filter(
-            (ex) => ex.isChecked === show
+            (ex) => ex.isChecked === show,
           ),
         };
 
@@ -35,7 +35,7 @@ const App = () => {
 
         localStorage.setItem(
           "extensions",
-          JSON.stringify(extensionsAfterRemove(extensionsInfo))
+          JSON.stringify(extensionsAfterRemove(extensionsInfo)),
         );
 
         return {
@@ -53,7 +53,7 @@ const App = () => {
         return {
           ...state,
           displayedExtensions: action.load.filter(
-            (ex) => ex.isChecked === stateStatus
+            (ex) => ex.isChecked === stateStatus,
           ),
         };
 
@@ -71,7 +71,7 @@ const App = () => {
     <>
       <Header />
       <Buttons state={state} dispatch={dispatch} />
-      <div className="flex flex-wrap gap-3 mb-6 justify-center mx-10">
+      <div className="mx-10 mb-6 flex flex-wrap justify-center gap-3">
         {state.displayedExtensions.length ? (
           state.displayedExtensions.map((extension) => (
             <Extension

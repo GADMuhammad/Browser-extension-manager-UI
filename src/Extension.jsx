@@ -31,15 +31,15 @@ const Extension = ({ title, icon, isChecked, description, dispatch }) => {
   };
 
   return (
-    <div className="w-96 h-44 p-4 grid grid-cols-[1fr_4fr] gap-x-0 gap-3 transition-colors duration-300 rounded-2xl border-solid border-1 border-btn-bg bg-header fade-in-up">
+    <div className="border-btn-bg bg-header fade-in-up grid h-44 w-96 grid-cols-[1fr_4fr] gap-3 gap-x-0 rounded-2xl border-1 border-solid p-4 transition-colors duration-300">
       <img src={icon} />
-      <div className="justify-stretch">
-        <h6 className="text-lg font-bold mb-0.5">{title}</h6>
+      <div>
+        <h6 className="mb-0.5 text-lg font-bold">{title}</h6>
         <p className="text-sm">{description}</p>
       </div>
       <button
         onClick={alert}
-        className="text-sm px-3 py-1.5 rounded-full border-2 border-btn-bg hover:border-transparent hover:bg-main-red hover:text-header duration-300 transition-colors cursor-pointer mt-auto"
+        className="border-btn-bg hover:bg-main-red hover:text-header mt-auto cursor-pointer rounded-full border-2 px-3 py-1.5 text-sm transition-colors duration-300 hover:border-transparent"
       >
         Remove
       </button>

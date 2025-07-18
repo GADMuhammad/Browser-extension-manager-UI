@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isDark, setIsDark] = useState(
-    JSON.parse(localStorage.getItem("darkModeCase"))
+    JSON.parse(localStorage.getItem("darkModeCase")),
   );
 
   useEffect(() => {
@@ -16,11 +16,11 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-header shadow-md mx-30 flex-wrap max-sm:flex-col rounded-2xl border-border border-2 border-solid flex gap-6 justify-between my-12 px-4 py-3">
+    <header className="bg-header border-border mx-30 my-12 flex flex-wrap justify-between gap-6 rounded-2xl border-2 border-solid px-4 py-3 shadow-md transition-colors duration-300 max-sm:flex-col">
       <img src="/images/logo.svg" alt="LOGO" className="mr-auto" />
       <button
         onClick={() => toggleTheme()}
-        className="bg-btn-bg rounded-xl p-2 cursor-pointer w-fit max-sm:mx-auto"
+        className="bg-btn-bg w-fit cursor-pointer rounded-xl p-2 max-sm:mx-auto"
       >
         <img
           src={`/images/icon-${isDark ? "sun" : "moon"}.svg`}

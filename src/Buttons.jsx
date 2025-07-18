@@ -7,10 +7,12 @@ const Buttons = ({ state, dispatch }) => {
     } border-1 cursor-pointer hover:bg-main-red hover:text-header hover:border-transparent transition-colors duration-300 border-solid rounded-4xl px-4 py-1.5`;
 
   return (
-    <main className="mb-6 mx-36 flex flex-wrap gap-10 justify-between items-center max-lg:flex-col max-lg:gap-4 max-lg:mx-auto">
-      <h1 className="text-3xl font-bold tracking-wide">Extensions List</h1>
+    <main className="mx-36 mb-6 flex flex-wrap items-center justify-between gap-10 max-lg:mx-auto max-lg:flex-col max-lg:gap-4">
+      <h1 className="text-3xl font-bold tracking-wide transition-colors duration-300">
+        Extensions List
+      </h1>
       <button
-        className={`bg-header hover:bg-transparent border-solid border-2 border-transparent hover:border-header transition-colors py-2 px-4 text-text rounded-4xl cursor-pointer w-fit fade-in-up ${
+        className={`bg-header hover:border-header text-text fade-in-up w-fit cursor-pointer rounded-4xl border-2 border-solid border-transparent px-4 py-2 transition-colors hover:bg-transparent ${
           state.displayedExtensions.length ? "hidden" : "block"
         }`}
         onClick={() => dispatch({ type: "Reset" })}
