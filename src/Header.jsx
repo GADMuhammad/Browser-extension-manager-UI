@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 
-const Header = ({ state, dispatch }) => {
-  const [darkModeCase, setDarkModeCase] = useState(
-    !!JSON.parse(localStorage.getItem("darkModeCase"))
+const Header = () => {
+  const [isDark, setIsDark] = useState(
+    JSON.parse(localStorage.getItem("darkModeCase"))
   );
 
   useEffect(() => {
-    darkModeCase && document.documentElement.classList.add("dark");
-  }, [darkModeCase]);
+    isDark && document.documentElement.classList.add("dark");
+  }, [isDark]);
 
   const toggleTheme = () => {
-    setDarkModeCase((prev) => !prev);
+    setIsDark((prev) => !prev);
     document.documentElement.classList.toggle("dark");
-    localStorage.setItem("darkModeCase", !darkModeCase);
+    localStorage.setItem("isDark", !isDark);
   };
 
   return (
@@ -23,7 +23,7 @@ const Header = ({ state, dispatch }) => {
         className="bg-btn-bg rounded-xl p-2 cursor-pointer w-fit max-sm:mx-auto"
       >
         <img
-          src={`/images/icon-${darkModeCase ? "sun" : "moon"}.svg`}
+          src={`/images/icon-${isDark ? "sun" : "moon"}.svg`}
           alt="toggle dark mode"
         />
       </button>

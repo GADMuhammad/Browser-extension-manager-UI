@@ -69,7 +69,7 @@ const App = () => {
 
   return (
     <>
-      <Header state={state} dispatch={dispatch} />
+      <Header />
       <Buttons state={state} dispatch={dispatch} />
       <div className="flex flex-wrap gap-3 mb-6 justify-center mx-10">
         {state.displayedExtensions.length ? (
