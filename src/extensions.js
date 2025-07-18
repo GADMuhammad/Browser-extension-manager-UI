@@ -1,7 +1,7 @@
 const extensions = [
   {
     title: "DevLens",
-    icon: "/images/logo-devlens.svg",
+    icon: "/images/logo-devLens.svg",
     isChecked: true,
     description:
       "Quickly inspect page layouts and visualize element boundaries.",
